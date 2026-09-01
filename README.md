@@ -1,10 +1,9 @@
 # Perry-Thomas RSVP Website
 
-Real HTML/CSS/JavaScript wedding RSVP website.
+Actual HTML/CSS/JavaScript wedding website using the original invitation wording from the supplied reference image.
 
-- Uses a clean text-free groom portrait in the website hero
-- No wording is embedded inside the groom photo
-- Both email addresses remain removed
-- Phone numbers remain
-- RSVP buttons scroll to the form and preselect the response
+- Original invitation wording restored as real website text
+- Aaron and Jarome names, date, time, venue, address, theme, dress code, RSVP deadline, and phone numbers retained
+- Both email addresses remain removed as previously requested
+- RSVP buttons remain interactive and scroll to the RSVP form
 - RSVP form is ready for Google Sheets integration
