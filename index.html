@@ -1,209 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jarome Perry & Aaron Thomas Jr. | Wedding RSVP</title>
-<style>
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:#e8f3fc;
-  color:#163d70;
-  font-family:Georgia, 'Times New Roman', serif;
-}
-
-.invite-wrap{
-  position:relative;
-  width:min(100%,862px);
-  margin:0 auto;
-  line-height:0;
-  background:#eef8ff;
-}
-.invite-image{
-  display:block;
-  width:100%;
-  height:auto;
-}
-
-/* Invisible clickable areas exactly over the two RSVP buttons in the design */
-.hotspot{
-  position:absolute;
-  top:67.6%;
-  height:5.6%;
-  border:0;
-  background:transparent;
-  cursor:pointer;
-  border-radius:18px;
-}
-.accept-hotspot{left:20.4%;width:24.9%}
-.decline-hotspot{left:49.0%;width:24.6%}
-.hotspot:focus-visible{
-  outline:3px solid #174a83;
-  outline-offset:2px;
-  background:rgba(255,255,255,.12);
-}
-
-.rsvp-section{
-  position:relative;
-  overflow:hidden;
-  min-height:900px;
-  background:
-    radial-gradient(circle at 50% 0%,rgba(255,255,255,.94),rgba(238,247,255,.94) 48%,rgba(219,235,249,.96)),
-    linear-gradient(#eef8ff,#dcecf8);
-  border-top:1px solid rgba(92,133,175,.25);
-  padding:52px 20px 70px;
-}
-.rsvp-section:before,
-.rsvp-section:after{
-  content:"❄";
-  position:absolute;
-  color:rgba(255,255,255,.72);
-  font-size:15rem;
-  z-index:0;
-}
-.rsvp-section:before{left:-50px;top:25px;transform:rotate(15deg)}
-.rsvp-section:after{right:-45px;bottom:20px;transform:rotate(-12deg)}
-
-.form-shell{
-  width:min(100%,690px);
-  margin:0 auto;
-  position:relative;
-  z-index:1;
-}
-h2{
-  margin:0;
-  text-align:center;
-  font-size:2rem;
-  letter-spacing:.12em;
-  font-weight:500;
-}
-.snow-mark,.bottom-mark{
-  text-align:center;
-  margin:6px 0 12px;
-  color:#6d9bc8;
-}
-.form-intro{
-  text-align:center;
-  font-size:.82rem;
-  letter-spacing:.08em;
-  font-weight:700;
-  margin:0 0 28px;
-}
-form{display:block}
-.grid.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px 18px;
-}
-label{
-  display:block;
-  font-size:.78rem;
-  font-weight:700;
-  color:#183d6b;
-  margin-bottom:18px;
-}
-label span{color:#c33;margin-left:3px}
-label small{font-weight:400}
-input,select,textarea{
-  width:100%;
-  margin-top:7px;
-  border:1px solid #c9d6e2;
-  border-radius:3px;
-  background:rgba(255,255,255,.94);
-  color:#283d54;
-  padding:12px 13px;
-  font:inherit;
-  font-family:Arial,sans-serif;
-  font-size:.9rem;
-  box-shadow:inset 0 1px 3px rgba(51,76,103,.05);
-}
-input:focus,select:focus,textarea:focus{
-  outline:2px solid #6b9bc8;
-  border-color:transparent;
-}
-textarea{resize:vertical}
-
-.submit-btn{
-  display:block;
-  margin:10px auto 0;
-  min-width:250px;
-  padding:13px 24px;
-  color:white;
-  font-family:Georgia,'Times New Roman',serif;
-  font-size:1rem;
-  letter-spacing:.05em;
-  border:1px solid #86add0;
-  border-radius:14px;
-  background:linear-gradient(#6f9fcd,#2f6398);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.65),
-    0 3px 7px rgba(25,63,105,.35);
-  cursor:pointer;
-}
-.submit-btn:hover{filter:brightness(1.04)}
-.message{
-  text-align:center;
-  min-height:1.2em;
-  font:600 .84rem Arial,sans-serif;
-  color:#2f6398;
-}
-.closing{
-  margin:28px 0 8px;
-  text-align:center;
-  font-size:1.7rem;
-  font-style:italic;
-  color:#3977b4;
-}
-
-@media(max-width:650px){
-  .grid.two{grid-template-columns:1fr}
-  .rsvp-section{padding:38px 16px 55px}
-  h2{font-size:1.55rem}
-  .form-intro{font-size:.72rem}
-  .submit-btn{width:100%}
-  .closing{font-size:1.35rem}
-}
-
-/* Guaranteed centering */
-html, body { width:100%; margin:0; }
-body { background:#e8f3fc; }
-.invite-wrap,
-.rsvp-section {
-  width:min(100%,862px) !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-}
-
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aaron & Jarome Wedding RSVP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="invite-wrap">
-  <img class="invite-image" src="images/wedding-top.png" alt="Aaron and Jarome winter wonderland wedding invitation">
+<div class="page">
 
-  <button class="hotspot accept-hotspot" type="button"
-          aria-label="I'll be there"
-          onclick="chooseResponse('Happily accepts')"></button>
+  <section class="top">
+    <div class="side-crystals left"></div>
+    <div class="side-crystals right"></div>
 
-  <button class="hotspot decline-hotspot" type="button"
-          aria-label="Can't make it"
-          onclick="chooseResponse('Unable to attend')"></button>
-</div>
+    <div class="invitation-copy">
+      <p class="families">TOGETHER WITH OUR FAMILIES<br>WE JOYFULLY INVITE YOU TO<br>CELEBRATE THE WEDDING OF</p>
 
-<section id="rsvp" class="rsvp-section">
-  <div class="snow-left"></div>
-  <div class="snow-right"></div>
+      <div class="names">
+        <span>Aaron</span>
+        <small>and</small>
+        <span>Jarome</span>
+      </div>
 
-  <div class="form-shell">
+      <div class="ornament"><i></i><b>❄</b><i></i></div>
+
+      <p class="weekday">SATURDAY</p>
+      <p class="date">JULY 31, 2027</p>
+      <div class="thin"></div>
+      <p class="ceremony">CEREMONY STARTS AT 3:00 PM</p>
+      <div class="thin"></div>
+
+      <p class="venue-title">RHYTHM FACTORY</p>
+      <p class="venue-address">8206 PHILIPS HWY UNIT 22<br>JACKSONVILLE, FL 32256</p>
+
+      <p class="winter">Winter wonderland in the Summertime</p>
+      <div class="ornament small"><i></i><b>❄</b><i></i></div>
+
+      <p class="dress-title">DRESS CODE: ELEGANT</p>
+      <p class="dress-copy">
+        EVERYONE MUST HAVE ON FORMAL<br>
+        WHITE NO SHOES, BOOTS, POLO SHIRTS, NO JEANS<br>
+        WHITE SUITS MEN AND WHITE DRESSES LADIES
+      </p>
+
+      <div class="rsvp-contact">
+        <p>RSVP BY 01/31/2027</p>
+        <span>☎ &nbsp;954.654.6387 &nbsp; | &nbsp; 305.710.5163</span>
+      </div>
+    </div>
+
+    <div class="photo-wrap">
+      <img src="images/aaron-jarome.jpg" alt="Aaron and Jarome">
+      <div class="photo-fade"></div>
+      <div class="bouquet">❄ ✦ ❄ ✧ ❄</div>
+    </div>
+  </section>
+
+  <section class="choices">
+    <p>PLEASE CLICK AN OPTION BELOW TO RSVP</p>
+    <div class="choice-row">
+      <button class="rsvp-choice" data-choice="Happily accepts">
+        <span class="flake">❄</span>
+        <span><strong>I’LL BE THERE</strong><small>Accepts with pleasure</small></span>
+      </button>
+      <button class="rsvp-choice" data-choice="Unable to attend">
+        <span><strong>CAN’T MAKE IT</strong><small>Declines with regret</small></span>
+        <span class="flake">❄</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="reminder">
+    <div class="reminder-box">
+      <p class="gentle">A GENTLE REMINDER</p>
+      <h2>Reserved Especially for You</h2>
+      <div class="ornament small"><i></i><b>❄</b><i></i></div>
+
+      <p>
+        As we celebrate this special occasion, our guest capacity is limited.
+        We kindly ask that you RSVP only if you plan to attend. If your plans
+        change after accepting, please let us know as soon as possible so we
+        may extend the invitation to another guest.
+      </p>
+
+      <p class="plus">
+        ADDITIONAL GUESTS OR PLUS ONES ARE NOT PERMITTED<br>
+        UNLESS APPROVED BY THE HOST PARTY.
+      </p>
+
+      <p class="script">
+        Thank you for your understanding and for helping us make room for
+        everyone who would love to celebrate with us.
+      </p>
+    </div>
+  </section>
+
+  <section class="form-area" id="rsvp-form">
     <h2>RSVP BY 01/31/2027</h2>
-    <div class="snow-mark">❄</div>
-    <p class="form-intro">PLEASE FILL OUT THE INFORMATION BELOW</p>
+    <div class="ornament small"><i></i><b>❄</b><i></i></div>
+    <p class="form-instruction">PLEASE FILL OUT THE INFORMATION BELOW</p>
 
-    <form onsubmit="return submitPreview(event)">
-      <div class="grid two">
+    <form id="rsvp">
+      <div class="grid">
         <label>
           Full Name(s)<span>*</span>
           <input type="text" name="name" placeholder="Enter your full name(s)" required>
@@ -215,53 +117,49 @@ body { background:#e8f3fc; }
         </label>
 
         <label>
-          Email Address<span>*</span>
-          <input type="email" name="email" placeholder="your.email@example.com" required>
-        </label>
-
-        <label>
           Will you be attending?<span>*</span>
-          <select id="attendance" name="attendance" required>
+          <select name="attendance" id="attendance" required>
             <option value="">Select an option</option>
             <option value="Happily accepts">Happily accepts</option>
             <option value="Unable to attend">Unable to attend</option>
           </select>
         </label>
+
+        <label>
+          Dietary Restrictions / Allergies
+          <textarea name="dietary" rows="3" placeholder="Please list any dietary restrictions or allergies"></textarea>
+        </label>
+
+        <label class="wide">
+          Additional Comments (Optional)
+          <textarea name="comments" rows="4" placeholder="Anything else we should know?"></textarea>
+        </label>
       </div>
 
-      <label>
-        Dietary Restrictions / Allergies
-        <textarea name="dietary" rows="4" placeholder="Please list any dietary restrictions or allergies"></textarea>
-      </label>
-
-      <label>
-        Additional Comments <small>(Optional)</small>
-        <textarea name="comments" rows="4" placeholder="Anything else we should know?"></textarea>
-      </label>
-
-      <button class="submit-btn" type="submit">❄ &nbsp; SUBMIT RSVP &nbsp; ❄</button>
-      <p id="message" class="message"></p>
+      <button type="submit" class="submit"><span>❄</span> SUBMIT RSVP <span>❄</span></button>
+      <p id="status" class="status"></p>
     </form>
 
-    <p class="closing">We can't wait to celebrate with you!</p>
-    <div class="bottom-mark">— ❄ —</div>
-  </div>
-</section>
+    <p class="closing">We can’t wait to celebrate with you!</p>
+    <div class="ornament small"><i></i><b>❄</b><i></i></div>
+  </section>
+
+</div>
 
 <script>
-function chooseResponse(value) {
-  const select = document.getElementById('attendance');
-  select.value = value;
-  document.getElementById('rsvp').scrollIntoView({behavior:'smooth'});
-  setTimeout(() => select.focus(), 700);
-}
+document.querySelectorAll('.rsvp-choice').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('attendance').value = btn.dataset.choice;
+    document.getElementById('rsvp-form').scrollIntoView({behavior:'smooth'});
+    setTimeout(() => document.querySelector('input[name="name"]').focus(), 550);
+  });
+});
 
-function submitPreview(event) {
-  event.preventDefault();
-  document.getElementById('message').textContent =
-    'Your RSVP form is ready. The next step is connecting submissions to Google Sheets.';
-  return false;
-}
+document.getElementById('rsvp').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('status').textContent =
+    'RSVP form is ready to be connected to Google Sheets.';
+});
 </script>
 
 </body>

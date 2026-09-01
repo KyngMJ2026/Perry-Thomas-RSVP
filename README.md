@@ -1,10 +1,13 @@
-# Perry-Thomas RSVP — V5 Centered (Guaranteed)
+# Perry-Thomas RSVP Website
 
-This is the original V5 website with the full V5 stylesheet embedded directly into index.html.
+Actual HTML/CSS/JavaScript wedding RSVP website matching the approved Winter Wonderland design.
 
-Why:
-- The live page was showing the invitation at the left edge, which indicates the stylesheet was not being applied.
-- This package makes the V5 centering independent of style.css loading.
-- Both the invitation and RSVP section are constrained to 862px and centered with auto margins.
-
-Upload/replace index.html, style.css, and the images folder.
+- Aaron & Jarome
+- July 31, 2027
+- Ceremony at 3:00 PM
+- Rhythm Factory
+- 8206 Philips Hwy Unit 22, Jacksonville, FL 32256
+- Both email addresses removed
+- Phone numbers retained
+- "I'll Be There" and "Can't Make It" scroll to the RSVP form and preselect the answer
+- RSVP form is ready to connect to Google Sheets
