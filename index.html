@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerome Perry & Aaron Thomas Jr. | Wedding RSVP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Together with their loved ones</p>
+      <h1>Jerome Perry<br><span>&</span><br>Aaron Thomas Jr.</h1>
+      <p class="subtitle">invite you to celebrate their wedding</p>
+      <div class="date-card">
+        <span>Wedding Date</span>
+        <strong>Coming Soon</strong>
+      </div>
+      <a href="#rsvp" class="primary-btn">RSVP</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <div class="section-heading">
+        <p class="eyebrow blue">A Celebration of Love</p>
+        <h2>Our Wedding</h2>
+      </div>
+      <p class="lead">We are excited to celebrate this special day with the people we love most. Additional wedding details will be shared as plans are finalized.</p>
+      <div class="detail-grid">
+        <article class="detail-card">
+          <div class="icon">♡</div>
+          <h3>Date</h3>
+          <p>Coming Soon</p>
+        </article>
+        <article class="detail-card">
+          <div class="icon">⌖</div>
+          <h3>Venue</h3>
+          <p>Coming Soon</p>
+        </article>
+        <article class="detail-card">
+          <div class="icon">✦</div>
+          <h3>Guest List</h3>
+          <p>Limited to 97 guests</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section note-section">
+      <div class="note-card">
+        <p class="eyebrow blue">A Gentle Reminder</p>
+        <h2>Reserved With Care</h2>
+        <p>Our celebration has a limited guest capacity. We kindly ask that only the individual named on the invitation attend. Plus ones are not included unless specifically stated.</p>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section rsvp-section">
+      <div class="rsvp-wrapper">
+        <div class="section-heading">
+          <p class="eyebrow blue">Kindly Respond</p>
+          <h2>RSVP</h2>
+        </div>
+        <p class="lead small">Please let us know whether you will be joining us. Your response will help us keep an accurate guest count.</p>
+
+        <form class="rsvp-form" action="#" method="post" onsubmit="return handleDemoSubmit(event)">
+          <div class="field-row">
+            <label>
+              Full Name
+              <input type="text" name="name" placeholder="Your full name" required />
+            </label>
+            <label>
+              Email or Phone
+              <input type="text" name="contact" placeholder="Email or phone number" required />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Your Response</legend>
+            <div class="choice-grid">
+              <label class="choice-card">
+                <input type="radio" name="attendance" value="Happily accepts" required />
+                <span class="choice-title">Happily accepts</span>
+                <span class="choice-copy">We look forward to celebrating with you.</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="attendance" value="Unable to attend" required />
+                <span class="choice-title">Unable to attend</span>
+                <span class="choice-copy">You will be missed and are with us in spirit.</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label>
+            Message to the Couple <span class="optional">(optional)</span>
+            <textarea name="message" rows="5" placeholder="Share a note, well wishes, or message"></textarea>
+          </label>
+
+          <button type="submit" class="primary-btn submit-btn">Submit RSVP</button>
+          <p class="form-note">This first version is ready for design review. We can connect it to Google Sheets once your RSVP form is created.</p>
+          <p id="demo-message" class="demo-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Jerome Perry & Aaron Thomas Jr.</p>
+    <span>Wedding details coming soon</span>
+  </footer>
+
+  <script>
+    function handleDemoSubmit(event) {
+      event.preventDefault();
+      document.getElementById('demo-message').textContent = 'RSVP form is ready for Google Sheets integration.';
+      return false;
+    }
+  </script>
+</body>
+</html>
