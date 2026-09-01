@@ -1,177 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jarome Perry & Aaron Thomas Jr. | Wedding RSVP</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jarome Perry & Aaron Thomas Jr. | Wedding RSVP</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-  <div class="snowflake sf1">❄</div>
-  <div class="snowflake sf2">❄</div>
-  <div class="snowflake sf3">❄</div>
+<div class="invite-wrap">
+  <img class="invite-image" src="images/wedding-top.png" alt="Aaron and Jarome winter wonderland wedding invitation">
 
-  <div class="hero-card">
-    <div class="hero-text">
-      <p class="eyebrow">Together with our families</p>
-      <p class="invite">We joyfully invite you to celebrate the wedding of</p>
+  <button class="hotspot accept-hotspot" type="button"
+          aria-label="I'll be there"
+          onclick="chooseResponse('Happily accepts')"></button>
 
-      <h1>
-        <span>Aaron</span>
-        <small>and</small>
-        <span>Jarome</span>
-      </h1>
+  <button class="hotspot decline-hotspot" type="button"
+          aria-label="Can't make it"
+          onclick="chooseResponse('Unable to attend')"></button>
+</div>
 
-      <div class="divider">❄</div>
+<section id="rsvp" class="rsvp-section">
+  <div class="snow-left"></div>
+  <div class="snow-right"></div>
 
-      <p class="weekday">Saturday</p>
-      <p class="date">July 31, 2027</p>
-      <p class="ceremony">Ceremony starts at 3:00 PM</p>
+  <div class="form-shell">
+    <h2>RSVP BY 01/31/2027</h2>
+    <div class="snow-mark">❄</div>
+    <p class="form-intro">PLEASE FILL OUT THE INFORMATION BELOW</p>
 
-      <div class="venue">
-        <strong>Rhythm Factory</strong>
-        <span>8206 Philips Hwy, Unit 22</span>
-        <span>Jacksonville, FL 32256</span>
-      </div>
-
-      <p class="theme">Winter Wonderland in the Summertime</p>
-
-      <a class="btn" href="#rsvp">RSVP Now</a>
-    </div>
-
-    <div class="hero-photo">
-      <img src="images/invitation-photo.png" alt="Aaron and Jarome wedding invitation">
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="section">
-    <div class="section-title">
-      <p class="eyebrow blue">Wedding Details</p>
-      <h2>Celebrate With Us</h2>
-    </div>
-
-    <div class="cards">
-      <article class="card">
-        <div class="icon">❄</div>
-        <h3>Date & Time</h3>
-        <p>Saturday, July 31, 2027</p>
-        <p>3:00 PM</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">✦</div>
-        <h3>Venue</h3>
-        <p>Rhythm Factory</p>
-        <p>8206 Philips Hwy, Unit 22<br>Jacksonville, FL 32256</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">♢</div>
-        <h3>Dress Code</h3>
-        <p>Elegant formal attire.</p>
-        <p>Additional details will be included with the formal invitation.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="reminder-wrap">
-    <div class="reminder">
-      <p class="eyebrow blue">A Gentle Reminder</p>
-      <h2>Reserved Especially for You</h2>
-      <div class="divider">❄</div>
-
-      <p>
-        As we celebrate this special occasion, our guest capacity is limited.
-        We kindly ask that you RSVP only if you plan to attend. If your plans
-        change after accepting, please let us know <strong>as soon as possible</strong>
-        so we may extend the invitation to another guest.
-      </p>
-
-      <p class="important">
-        Additional guests or plus ones are not permitted unless approved by the host party.
-      </p>
-
-      <p class="thank-you">
-        Thank you for your understanding and for helping us make room for everyone
-        who would love to celebrate with us.
-      </p>
-    </div>
-  </section>
-
-  <section class="rsvp-section" id="rsvp">
-    <div class="rsvp-card">
-      <div class="section-title">
-        <p class="eyebrow blue">Kindly Respond</p>
-        <h2>RSVP</h2>
-      </div>
-
-      <form onsubmit="return demoSubmit(event)">
-        <div class="two-col">
-          <label>
-            Full Name
-            <input type="text" name="name" placeholder="Your full name" required>
-          </label>
-
-          <label>
-            Email or Phone
-            <input type="text" name="contact" placeholder="Email or phone number" required>
-          </label>
-        </div>
-
-        <fieldset>
-          <legend>Your Response</legend>
-
-          <div class="response-options">
-            <label class="response-card">
-              <input type="radio" name="attendance" value="Happily accepts" required>
-              <span class="response-title">Happily accepts</span>
-              <span class="response-sub">We look forward to celebrating with you.</span>
-            </label>
-
-            <label class="response-card">
-              <input type="radio" name="attendance" value="Unable to attend" required>
-              <span class="response-title">Unable to attend</span>
-              <span class="response-sub">You will be missed and are with us in spirit.</span>
-            </label>
-          </div>
-        </fieldset>
-
+    <form onsubmit="return submitPreview(event)">
+      <div class="grid two">
         <label>
-          Message to the Couple <span class="optional">(optional)</span>
-          <textarea name="message" rows="5" placeholder="Share a note or well wishes"></textarea>
+          Full Name(s)<span>*</span>
+          <input type="text" name="name" placeholder="Enter your full name(s)" required>
         </label>
 
-        <button class="btn submit" type="submit">Submit RSVP</button>
+        <label>
+          Phone Number<span>*</span>
+          <input type="tel" name="phone" placeholder="(000) 000-0000" required>
+        </label>
 
-        <p class="preview-note">
-          RSVP submission is currently in preview mode. We can connect this form to Google Sheets next.
-        </p>
-        <p id="formMessage" class="form-message"></p>
-      </form>
-    </div>
-  </section>
-</main>
+        <label>
+          Email Address<span>*</span>
+          <input type="email" name="email" placeholder="your.email@example.com" required>
+        </label>
 
-<footer>
-  <div class="snow-divider">❄ ✦ ❄</div>
-  <p>Jarome Perry & Aaron Thomas Jr.</p>
-  <span>July 31, 2027 • Jacksonville, Florida</span>
-</footer>
+        <label>
+          Will you be attending?<span>*</span>
+          <select id="attendance" name="attendance" required>
+            <option value="">Select an option</option>
+            <option value="Happily accepts">Happily accepts</option>
+            <option value="Unable to attend">Unable to attend</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Dietary Restrictions / Allergies
+        <textarea name="dietary" rows="4" placeholder="Please list any dietary restrictions or allergies"></textarea>
+      </label>
+
+      <label>
+        Additional Comments <small>(Optional)</small>
+        <textarea name="comments" rows="4" placeholder="Anything else we should know?"></textarea>
+      </label>
+
+      <button class="submit-btn" type="submit">❄ &nbsp; SUBMIT RSVP &nbsp; ❄</button>
+      <p id="message" class="message"></p>
+    </form>
+
+    <p class="closing">We can't wait to celebrate with you!</p>
+    <div class="bottom-mark">— ❄ —</div>
+  </div>
+</section>
 
 <script>
-function demoSubmit(e) {
-  e.preventDefault();
-  document.getElementById('formMessage').textContent =
-    'Your RSVP form is ready to be connected to Google Sheets.';
+function chooseResponse(value) {
+  const select = document.getElementById('attendance');
+  select.value = value;
+  document.getElementById('rsvp').scrollIntoView({behavior:'smooth'});
+  setTimeout(() => select.focus(), 700);
+}
+
+function submitPreview(event) {
+  event.preventDefault();
+  document.getElementById('message').textContent =
+    'Your RSVP form is ready. The next step is connecting submissions to Google Sheets.';
   return false;
 }
 </script>
+
 </body>
 </html>
