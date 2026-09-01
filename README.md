@@ -1,11 +1,8 @@
-# Perry-Thomas RSVP Website — V7 Sharp HTML/CSS Edition
+# Perry-Thomas RSVP Website — V8
 
-This version fixes the pixelated full-page background by rebuilding the invitation as real HTML/CSS.
+This version fixes the V7 styling failure by placing all required CSS directly inside index.html.
+That means the page will retain its design even if style.css is missing or GitHub Pages serves an older stylesheet.
 
-## What changed
-- The full invitation is no longer stretched as a background image.
-- Text, borders, RSVP buttons, venue details, dress code, reminders, and form fields are rendered as crisp HTML/CSS.
-- The uploaded image is used only as a cropped couple photo so it stays sharper.
-- Clicking **I'LL BE THERE** scrolls to the RSVP form and preselects **Happily accepts**.
-- Clicking **CAN'T MAKE IT** scrolls to the RSVP form and preselects **Unable to attend**.
-- The RSVP form remains ready for Google Sheets integration.
+Files required:
+- index.html
+- images/couple-photo.jpg
