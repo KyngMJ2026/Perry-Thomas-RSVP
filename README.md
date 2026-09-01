@@ -1,1 +1,3 @@
-Self-contained Perry-Thomas Wedding RSVP website. Replace only index.html in the GitHub repository. All styling and visual assets are embedded in the file, so there are no missing CSS or image-folder dependencies.
+# Perry-Thomas Wedding RSVP Website
+
+Updated website version with the transparent frost/photo overlay removed so both Aaron and Jarome remain fully clear in the hero photo. All other website styling and RSVP functionality remain unchanged.
