@@ -159,3 +159,23 @@ textarea{resize:vertical}
   .submit-btn{width:100%}
   .closing{font-size:1.35rem}
 }
+
+/* Center V5 invitation on wider screens */
+html, body {
+  width: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invitation-wrap,
+.invite-wrap,
+.invitation,
+main,
+.site-wrap,
+.page-wrap {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
