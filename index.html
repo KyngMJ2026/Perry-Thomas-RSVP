@@ -10,14 +10,18 @@
 
 <div class="invite-wrap">
   <img class="invite-image" src="images/wedding-top.png" alt="Aaron and Jarome winter wonderland wedding invitation">
+  <div class="invitation-actions">
+    <p>PLEASE CLICK AN OPTION BELOW TO RSVP</p>
+    <div class="action-buttons">
+      <button class="image-style-btn" type="button" onclick="chooseResponse('Happily accepts')">
+        <strong>I'LL BE THERE</strong><small>Accepts with pleasure</small>
+      </button>
+      <button class="image-style-btn" type="button" onclick="chooseResponse('Unable to attend')">
+        <strong>CAN'T MAKE IT</strong><small>Declines with regret</small>
+      </button>
+    </div>
+  </div>
 
-  <button class="hotspot accept-hotspot" type="button"
-          aria-label="I'll be there"
-          onclick="chooseResponse('Happily accepts')"></button>
-
-  <button class="hotspot decline-hotspot" type="button"
-          aria-label="Can't make it"
-          onclick="chooseResponse('Unable to attend')"></button>
 </div>
 
 <section id="rsvp" class="rsvp-section">

@@ -159,3 +159,10 @@ textarea{resize:vertical}
   .submit-btn{width:100%}
   .closing{font-size:1.35rem}
 }
+
+.invitation-actions{width:100%;padding:18px 18px 25px;text-align:center;line-height:normal;background:linear-gradient(180deg,#edf7ff,#dbeaf7);border-top:1px solid rgba(79,119,160,.22)}
+.invitation-actions p{margin:0 0 13px;color:#204e83;font-family:Georgia,'Times New Roman',serif;font-size:.92rem;letter-spacing:.11em}
+.action-buttons{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.image-style-btn{width:245px;min-height:64px;padding:9px 18px;border:1px solid #7ba5cc;border-radius:16px;background:linear-gradient(180deg,#719fcb,#2e6399);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.65),0 3px 8px rgba(26,63,103,.32);cursor:pointer;font-family:Georgia,'Times New Roman',serif}
+.image-style-btn strong{display:block;font-size:1.05rem;letter-spacing:.035em}.image-style-btn small{display:block;margin-top:3px;font-size:.82rem;font-style:italic}.image-style-btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+@media(max-width:600px){.action-buttons{gap:12px}.image-style-btn{width:100%}}
