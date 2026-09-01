@@ -1,4 +1,3 @@
-# Perry-Thomas RSVP Website V14
+# Perry-Thomas RSVP Website V15
 
-Layout fix for wide desktop screens. CSS is embedded directly in index.html to prevent stale stylesheet caching.
-The page is capped to a centered invitation width and scales responsively on phones/tablets.
+Corrected the invitation header/name spacing so Aaron no longer overlaps the introductory wording, the word 'and' is clearly visible between the names, and Jarome remains fully visible.
