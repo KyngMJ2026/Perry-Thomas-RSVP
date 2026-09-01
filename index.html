@@ -1,43 +1,133 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jarome Perry & Aaron Thomas Jr. | Wedding RSVP</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#dceeff">
+  <title>Jarome Perry & Aaron Thomas Jr. | Wedding RSVP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="invite-wrap">
-  <img class="invite-image" src="images/wedding-top.png" alt="Aaron and Jarome winter wonderland wedding invitation">
-  <div class="invitation-actions">
-    <p>PLEASE CLICK AN OPTION BELOW TO RSVP</p>
-    <div class="action-buttons">
-      <button class="image-style-btn" type="button" onclick="chooseResponse('Happily accepts')">
-        <strong>I'LL BE THERE</strong><small>Accepts with pleasure</small>
-      </button>
-      <button class="image-style-btn" type="button" onclick="chooseResponse('Unable to attend')">
-        <strong>CAN'T MAKE IT</strong><small>Declines with regret</small>
-      </button>
+<header class="hero">
+  <div class="frost frost-a">❄</div>
+  <div class="frost frost-b">❄</div>
+  <div class="frost frost-c">❄</div>
+
+  <div class="hero-shell">
+    <div class="photo-side">
+      <div class="photo-frame">
+        <img src="images/couple-photo.jpg" alt="Jarome Perry and Aaron Thomas Jr.">
+      </div>
+      <div class="winter-title">
+        <span>Winter</span>
+        <strong>WONDERLAND</strong>
+        <small>in the</small>
+        <span>Summertime</span>
+      </div>
+    </div>
+
+    <div class="details-side">
+      <p class="eyebrow">Please join us for the</p>
+      <div class="wedding-word">WEDDING</div>
+      <p class="of">of</p>
+
+      <h1>
+        <span>Jarome</span>
+        <small>PERRY</small>
+        <b>&amp;</b>
+        <span>Aaron</span>
+        <small>THOMAS</small>
+      </h1>
+
+      <div class="snow-divider">❄</div>
+
+      <p class="weekday">Saturday</p>
+      <p class="month">JULY</p>
+      <div class="dayline"><span>31</span><sup>ST</sup></div>
+      <p class="year">2027</p>
+
+      <div class="event-time">
+        <strong>3:00 PM</strong>
+        <span>UNTIL</span>
+        <strong>9:00 PM</strong>
+      </div>
+
+      <div class="venue">
+        <h2>Rhythm Factory</h2>
+        <p>8206 Philips Hwy, Unit 22<br>Jacksonville, FL 32256<br>United States</p>
+      </div>
+
+      <div class="dress-code">
+        <div class="dress-icons">
+          <span>🚫👞</span><span>🚫🥾</span><span>🚫👖</span>
+        </div>
+        <p>NO SHOES &nbsp;&nbsp; NO BOOTS &nbsp;&nbsp; NO JEANS</p>
+        <h3>FORMAL ELEGANT ATTIRE <span>(WHITE)</span></h3>
+      </div>
+
+      <div class="rsvp-deadline">
+        <small>Please RSVP by</small>
+        <strong>January 31, 2027</strong>
+      </div>
     </div>
   </div>
 
-</div>
+  <div class="action-panel">
+    <p>Please click an option below to RSVP</p>
+    <div class="action-buttons">
+      <button type="button" class="choice-btn" onclick="chooseResponse('Happily accepts')">
+        <span class="flake">❄</span>
+        <strong>I'LL BE THERE</strong>
+        <small>Accepts with pleasure</small>
+      </button>
+      <button type="button" class="choice-btn" onclick="chooseResponse('Unable to attend')">
+        <strong>CAN'T MAKE IT</strong>
+        <small>Declines with regret</small>
+        <span class="flake">❄</span>
+      </button>
+    </div>
+  </div>
+</header>
 
-<section id="rsvp" class="rsvp-section">
-  <div class="snow-left"></div>
-  <div class="snow-right"></div>
+<section class="reminder-section">
+  <div class="reminder-card">
+    <p class="eyebrow blue">A Gentle Reminder</p>
+    <h2>Reserved Especially for You</h2>
+    <div class="snow-divider">❄</div>
 
-  <div class="form-shell">
+    <p>
+      As we celebrate this special occasion, our guest capacity is limited.
+      We kindly ask that you RSVP only if you plan to attend. If your plans
+      change after accepting, please let us know <strong>as soon as possible</strong>
+      so we may extend the invitation to another guest.
+    </p>
+
+    <p class="important">
+      Additional guests or plus ones are not permitted unless approved by the host party.
+    </p>
+
+    <p class="script-note">
+      Thank you for your understanding and for helping us make room for everyone
+      who would love to celebrate with us.
+    </p>
+  </div>
+</section>
+
+<section class="rsvp-section" id="rsvp">
+  <div class="rsvp-shell">
     <h2>RSVP BY 01/31/2027</h2>
-    <div class="snow-mark">❄</div>
-    <p class="form-intro">PLEASE FILL OUT THE INFORMATION BELOW</p>
+    <div class="snow-divider">❄</div>
+    <p class="form-intro">Please fill out the information below</p>
 
-    <form onsubmit="return submitPreview(event)">
-      <div class="grid two">
+    <form onsubmit="return previewSubmit(event)">
+      <div class="grid">
         <label>
-          Full Name(s)<span>*</span>
-          <input type="text" name="name" placeholder="Enter your full name(s)" required>
+          Full Name<span>*</span>
+          <input type="text" name="name" placeholder="Enter your full name" required>
         </label>
 
         <label>
@@ -75,25 +165,28 @@
     </form>
 
     <p class="closing">We can't wait to celebrate with you!</p>
-    <div class="bottom-mark">— ❄ —</div>
+    <div class="snow-divider">— ❄ —</div>
   </div>
 </section>
+
+<footer>
+  <p>Jarome Perry &amp; Aaron Thomas Jr.</p>
+  <span>July 31, 2027 • Rhythm Factory • Jacksonville, Florida</span>
+</footer>
 
 <script>
 function chooseResponse(value) {
   const select = document.getElementById('attendance');
   select.value = value;
   document.getElementById('rsvp').scrollIntoView({behavior:'smooth'});
-  setTimeout(() => select.focus(), 700);
+  setTimeout(() => select.focus(), 650);
 }
-
-function submitPreview(event) {
+function previewSubmit(event) {
   event.preventDefault();
   document.getElementById('message').textContent =
-    'Your RSVP form is ready. The next step is connecting submissions to Google Sheets.';
+    'The RSVP form is ready to be connected to Google Sheets.';
   return false;
 }
 </script>
-
 </body>
 </html>
