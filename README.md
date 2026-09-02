@@ -1,3 +1,12 @@
-# Perry-Thomas RSVP Website V15
+# Perry-Thomas RSVP Website V16
 
-Corrected the invitation header/name spacing so Aaron no longer overlaps the introductory wording, the word 'and' is clearly visible between the names, and Jarome remains fully visible.
+Google Forms integration added.
+
+Guests fill out the RSVP directly on the wedding website. Submitting sends the response to the linked Google Form using a hidden iframe, so the Google Form does not open or redirect the guest away from the website.
+
+Mapped fields:
+- Full Name -> entry.760003403
+- Phone Number -> entry.622135598
+- Attendance -> entry.1381178048
+- Dietary Restrictions / Allergies -> entry.1423386461
+- Additional Comments -> entry.125131094

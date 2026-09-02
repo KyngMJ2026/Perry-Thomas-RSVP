@@ -445,26 +445,26 @@ input,select,textarea{
     <h2>RSVP BY 01/31/2027</h2>
     <div class="orn"><i></i><b>❄</b><i></i></div>
     <p class="form-intro">PLEASE FILL OUT THE INFORMATION BELOW</p>
-    <form id="rsvp">
+    <form id="rsvp" action="https://docs.google.com/forms/d/e/1FAIpQLSfWNnihUOg-Y9lGnhPiSQuRv0GR_D_red0dBoIX9YFiHEKL7Q/formResponse" method="POST" target="hidden_iframe">
       <div class="form-grid">
         <label>Full Name(s)<span>*</span>
-          <input type="text" name="name" placeholder="Enter your full name(s)" required>
+          <input type="text" name="entry.760003403" placeholder="Enter your full name(s)" required>
         </label>
         <label>Phone Number<span>*</span>
-          <input type="tel" name="phone" placeholder="(000) 000-0000" required>
+          <input type="tel" name="entry.622135598" placeholder="(000) 000-0000" required>
         </label>
         <label class="wide">Will you be attending?<span>*</span>
-          <select id="attendance" name="attendance" required>
+          <select id="attendance" name="entry.1381178048" required>
             <option value="">Select an option</option>
             <option value="Happily accepts">Happily accepts</option>
             <option value="Unable to attend">Unable to attend</option>
           </select>
         </label>
         <label class="wide">Dietary Restrictions / Allergies
-          <textarea name="dietary" rows="3" placeholder="Please list any dietary restrictions or allergies"></textarea>
+          <textarea name="entry.1423386461" rows="3" placeholder="Please list any dietary restrictions or allergies"></textarea>
         </label>
         <label class="wide">Additional Comments (Optional)
-          <textarea name="comments" rows="4" placeholder="Anything else we should know?"></textarea>
+          <textarea name="entry.125131094" rows="4" placeholder="Anything else we should know?"></textarea>
         </label>
       </div>
       <button class="submit" type="submit">❄ &nbsp; SUBMIT RSVP &nbsp; ❄</button>
@@ -481,13 +481,36 @@ document.querySelectorAll('.choice').forEach(btn => {
   btn.addEventListener('click', () => {
     document.getElementById('attendance').value = btn.dataset.choice;
     document.getElementById('rsvp-form').scrollIntoView({behavior:'smooth', block:'start'});
-    setTimeout(() => document.querySelector('input[name="name"]').focus(), 500);
+    setTimeout(() => document.querySelector('input[name="entry.760003403"]').focus(), 500);
   });
 });
-document.getElementById('rsvp').addEventListener('submit', e => {
-  e.preventDefault();
-  document.getElementById('status').textContent = 'RSVP form is ready to be connected to Google Sheets.';
+
+const rsvpForm = document.getElementById('rsvp');
+const statusEl = document.getElementById('status');
+
+rsvpForm.addEventListener('submit', function() {
+  statusEl.textContent = 'Submitting your RSVP...';
+  const submitBtn = rsvpForm.querySelector('.submit');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '.7';
+    submitBtn.style.cursor = 'default';
+  }
+
+  setTimeout(() => {
+    statusEl.textContent = 'Thank you! Your RSVP has been submitted.';
+    rsvpForm.reset();
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '';
+      submitBtn.style.cursor = '';
+    }
+  }, 1200);
 });
+
 </script>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
 </body>
 </html>
